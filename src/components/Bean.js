@@ -8,7 +8,7 @@ function Bean(props) {
       <h3>{props.name} - ${props.price}</h3>
       <p><em>{props.origin}</em></p>
       <h4>{props.roast}</h4>
-      <h4>{props.beanCount}/{props.initialBean} Beans in Stock</h4>
+      <h4>Click for details of Beans in Stock</h4>
       </div>
       <button onClick={() => props.whenBuyBeanClicked(props.id)}>Buy a 1b Bag!</button>
     </React.Fragment> 
