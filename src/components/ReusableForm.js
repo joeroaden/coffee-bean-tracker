@@ -16,7 +16,7 @@ function ReusableForm(props){
         <textarea
           name='origin'
           placeholder='Describe the origin of this coffee bean.' />
-        <input type='text' 
+        <textarea
           name='roast'
           placeholder='Enter the type of Roast ex. Light, Medium, Dark' />
         <button type='submit'>{props.buttonText}</button>

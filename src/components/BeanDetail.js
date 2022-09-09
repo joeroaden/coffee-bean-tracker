@@ -7,8 +7,8 @@ function BeanDetail(props) {
     <React.Fragment>
       <h1>Bean Detail</h1>
       <h3>{bean.name} - ${bean.price}</h3>
-      <p><em>{bean.origin}</em></p>
-      <h4>{bean.roast}</h4>
+      <p>Origin:<em>{bean.origin}</em></p>
+      <h4>Roast:{bean.roast}</h4>
       <button onClick={ props.onClickingEdit }>Update Bean</button>
       <button onClick={() => onClickingDelete(bean.id) }>Delete Bean</button>
       <hr/>

@@ -1,6 +1,6 @@
 import React from "react";
 import NewBeanForm from './NewBeanForm';
-import BeanList from './Beanist';
+import BeanList from './BeanList';
 import BeanDetail from "./BeanDetail";
 import EditBeanForm from "./EditBeanForm";
 
@@ -42,7 +42,7 @@ class BeanControl extends React.Component {
   handleDeletingBean = (id) => {
     const newMainBeanList = this.state.mainBeanList.filter(bean=> bean.id !== id);
     this.setState({
-      mainBeanist: newMainBeanList,
+      mainBeanList: newMainBeanList,
       selectedBean: null
     });
   }
