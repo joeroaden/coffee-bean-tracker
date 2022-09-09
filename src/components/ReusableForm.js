@@ -5,30 +5,39 @@ function ReusableForm(props){
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
+        <h3>Add a type of Bean to the shop!</h3>
         <input
           type='text'
           name='name'
           placeholder='Bean Name' />
+          <hr></hr>
         <input
           type='number'
           name='price'
           placeholder='Price of Bean'/>
+          <hr></hr>
         <textarea
           name='origin'
           placeholder='Describe the origin of this coffee bean.' />
+          <hr></hr>
         <textarea
           name='roast'
           placeholder='Enter the type of Roast ex. Light, Medium, Dark' />
+          <hr></hr>
+          <h5>Max amount of beans available in lbs - Defaults to standard 130lb bag</h5>
         <input 
         type='number' 
         min="0" 
         name='beanCount' 
-        placeholder='Max Amount of Beans' />
+        defaultValue='130' />
+        <hr></hr>
+        <h5>Amount of beans currently in bag in lbs - Defaults to standard 130lb bag</h5>
         <input 
         type='number' 
         min="0" 
         name='initialBean' 
-        placeholder='Remaining Beans' />
+        defaultValue='130'/>
+        <hr></hr>
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
