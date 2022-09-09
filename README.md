@@ -1,7 +1,61 @@
-# Getting Started with Create React App
+# _coffee-bean-tracker_
+
+#### By _Joe Roaden_
+
+#### _A REACT application that allows a user to add different types of coffee beans to an inventory system_
+
 
 ![image component diagram](Component-Diagram.png)
 
+---
+## Table of Contents
+[Technologies Used](#technologies-used)  
+[Description](#description)  
+[Setup/Installation Requirements](#setup-and-installation-requirements)   
+[Known Bugs](#known-bugs)  
+[License](#License)
+
+---
+## Technologies Used
+
+* _REACT_
+* _JavaScript_
+* _HTML_
+* _CSS_
+* _JSX_
+
+
+---
+## Description
+
+_The user can add beans and specify price, origin, roast and name.  A user can then update and delete each type of bean.  A user can then buy a bean and the total beans in stock will update_
+
+---
+## Setup and Installation Requirements
+
+<details>
+<summary><strong>Initial Setup</strong></summary>  
+
+1. Copy the git repository url: https://github.com/joeroaden/coffee-bean-tracker
+2. Open a shell program and navigate to your desktop.
+3. Clone the repository for this project using the `git clone` command and including the copied URL.
+4. While still in the shell program, navigate to the root directory of the newly created file named `coffee-bean-tracker`.
+5. From the root directory, run `npm run start` to view the application on your local live server.
+
+
+---
+## Known Bugs
+
+* _There are no known bugs at this time_
+
+---
+## License
+
+
+
+[Copyright](/LICENSE) © 2022 Joe Roaden
+
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
