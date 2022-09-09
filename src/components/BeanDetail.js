@@ -9,7 +9,7 @@ function BeanDetail(props) {
       <h3>{bean.name} - ${bean.price}</h3>
       <p>Origin:<em>{bean.origin}</em></p>
       <h4>Roast:{bean.roast}</h4>
-      <h4>{bean.beanCount}/{bean.initialBean}</h4>
+      <h4>Beans in stock:{bean.beanCount}/{bean.initialBean}</h4>
       <button onClick={ props.onClickingEdit }>Update Bean</button>
       <button onClick={() => onClickingDelete(bean.id) }>Delete Bean</button>
       <hr/>

@@ -19,8 +19,16 @@ function ReusableForm(props){
         <textarea
           name='roast'
           placeholder='Enter the type of Roast ex. Light, Medium, Dark' />
-        <input type='number' min="0" name='maxBeans' placeholder='Max Amount of Beans' />
-        <input type='number' min="0" name='beansRemaining' placeholder='Remaining Beans' />
+        <input 
+        type='number' 
+        min="0" 
+        name='beanCount' 
+        placeholder='Max Amount of Beans' />
+        <input 
+        type='number' 
+        min="0" 
+        name='initialBean' 
+        placeholder='Remaining Beans' />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
