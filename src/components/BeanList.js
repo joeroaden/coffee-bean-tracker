@@ -9,6 +9,7 @@ function BeanList(props){
       {props.beanList.map((bean) =>
       <Bean 
         whenBeanClicked={props.onBeanSelection }
+        whenBuyBeanClicked ={props.onBuyingBean}
         name={bean.name}
         price={bean.price}
         origin={bean.origin}
@@ -21,7 +22,8 @@ function BeanList(props){
 }
 BeanList.propTypes = {
   beanList: PropTypes.array,
-  onBeanSelection: PropTypes.func
+  onBeanSelection: PropTypes.func,
+  onBuyingBean: PropTypes.func
 };
 
 export default BeanList;

@@ -59,6 +59,17 @@ class BeanControl extends React.Component {
       selectedBean: null
     });
   }
+  handleBuyingBagOfBeans = (id) => {
+    const bagToBuy = this.state.mainBeanList.find(bean => bean.id === id);
+    if(bagToBuy.beanCount > 0){
+      const updatedBagToBuy = {...bagToBuy, beanCount: bagToBuy.beanCount - 1}
+      const updatedMainBeanList = this.state.mainBeanList
+      .filter(bean => bean.id !== id)
+      .concat(updatedBagToBuy);
+      this.setState({mainBeanList: updatedMainBeanList})
+    }
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -76,7 +87,8 @@ class BeanControl extends React.Component {
       buttonText = "Return to Bean List";
     } else  {
       currentlyVisibleState = <BeanList beanList={this.state.mainBeanList} 
-      onBeanSelection={this.handleChangingSelectedBean}/>;
+      onBeanSelection={this.handleChangingSelectedBean}
+      onBuyingBean={this.handleBuyingBagOfBeans}/>;
       buttonText = "Add Bean";    
     }
     return (

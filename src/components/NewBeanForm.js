@@ -11,6 +11,8 @@ function NewBeanForm(props) {
       price: event.target.price.value,
       origin: event.target.origin.value,
       roast: event.target.roast.value,
+      beanCount: parseInt(event.target.beanCount.value),
+      initialBean: parseInt(event.target.initialBean.value),
       id: v4()
     });
 

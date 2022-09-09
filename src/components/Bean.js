@@ -8,7 +8,9 @@ function Bean(props) {
       <h3>{props.name} - ${props.price}</h3>
       <p><em>{props.origin}</em></p>
       <h4>{props.roast}</h4>
+      <h4>{props.beanCount}/{props.initialBean} Beans in Stock</h4>
       </div>
+      <button onClick={() => props.buyButtonClicked(props.id)}>Buy a 1b Bag!</button>
     </React.Fragment> 
   );
 }
@@ -19,7 +21,10 @@ Bean.propTypes = {
   origin: PropTypes.string,
   roast: PropTypes.string,
   id: PropTypes.string,
-  whenBeanClicked: PropTypes.func
+  beanCount: PropTypes.number,
+  initialBean: PropTypes.number,
+  whenBeanClicked: PropTypes.func,
+  buyButtonClicked: PropTypes.func
 };
 
 export default Bean;
