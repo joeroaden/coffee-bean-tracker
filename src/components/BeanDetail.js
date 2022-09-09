@@ -6,7 +6,7 @@ function BeanDetail(props) {
   return (
     <React.Fragment>
       <h1>Bean Detail</h1>
-      <h3>{bean.name} - ${bean.price}</h3>
+      <h3>{bean.name} - ${bean.price} per 1lb. Bag</h3>
       <p>Origin:<em>{bean.origin}</em></p>
       <h4>Roast:{bean.roast}</h4>
       <h4>Beans in stock:{bean.beanCount}lbs./{bean.initialBean}lbs.</h4>
