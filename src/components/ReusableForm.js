@@ -24,14 +24,14 @@ function ReusableForm(props){
           name='roast'
           placeholder='Enter the type of Roast ex. Light, Medium, Dark' />
           <hr></hr>
-          <h5>Max amount of beans available in lbs - Defaults to standard 130lb bag</h5>
+          <h5>Enter Desired Bag Size (in pounds) - Defaults to standard 130lb bag</h5>
         <input 
         type='number' 
         min="0" 
         name='beanCount' 
         defaultValue='130' />
         <hr></hr>
-        <h5>Amount of beans currently in bag in lbs - Defaults to standard 130lb bag</h5>
+        <h5>Enter current amount of beans in bag (in pounds) - Defaults to standard 130lb bag</h5>
         <input 
         type='number' 
         min="0" 
