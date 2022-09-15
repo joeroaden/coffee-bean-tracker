@@ -40,7 +40,8 @@ _The user can add beans and specify price, origin, roast and name.  A user can t
 2. Open a shell program and navigate to your desktop.
 3. Clone the repository for this project using the `git clone` command and including the copied URL.
 4. While still in the shell program, navigate to the root directory of the newly created file named `coffee-bean-tracker`.
-5. From the root directory, run `npm run start` to view the application on your local live server.
+5. From the root directory, run `npm install` to install all modules that are listed on package. json file and their dependencies
+6. From the root directory, run `npm run start` to view the application on your local live server.
 
 
 ---

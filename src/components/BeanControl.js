@@ -4,6 +4,7 @@ import BeanList from './BeanList';
 import BeanDetail from "./BeanDetail";
 import EditBeanForm from "./EditBeanForm";
 
+
 class BeanControl extends React.Component {
 
   constructor(props) {
@@ -12,7 +13,8 @@ class BeanControl extends React.Component {
       formVisibleOnPage: false,
       mainBeanList: [],
       selectedBean: null,
-      editing: false
+      editing: false, 
+      // beanCount: 0
     };
   }
 
@@ -59,16 +61,20 @@ class BeanControl extends React.Component {
       selectedBean: null
     });
   }
-  handleBuyingBagOfBeans = (id) => {
-    const bagToBuy = this.state.mainBeanList.find(bean => bean.id === id);
-    if(bagToBuy.beanCount > 0){
-      const updatedBagToBuy = {...bagToBuy, beanCount: bagToBuy.beanCount - 1}
-      const updatedMainBeanList = this.state.mainBeanList
-      .filter(bean => bean.id !== id)
-      .concat(updatedBagToBuy);
-      this.setState({mainBeanList: updatedMainBeanList})
-    }
+
+    handleBuyingBagOfBeans = () => {
+      const bagToBuy = this.state.selectedBean;
+      if (this.state.selectedBean.beanCount !== 0){
+          const quantityToSell = {
+              quantity: bagToBuy.beanCount -=1
+          }
+          this.handleChangingSelectedBean(quantityToSell.id)   
+      } else {
+          this.handleChangingSelectedBean(this.state.selectedBean.id)
+          // this.setState({selectedBean: bagToBuy});
+      }
   }
+
 
   render(){
     let currentlyVisibleState = null;
@@ -79,7 +85,8 @@ class BeanControl extends React.Component {
     }
     else if(this.state.selectedBean != null) {
       currentlyVisibleState = <BeanDetail bean= {this.state.selectedBean} onClickingDelete = {this.handleDeletingBean}
-      onClickingEdit= {this.handleEditClick}/>
+      onClickingEdit= {this.handleEditClick}
+      onBuyingBean={this.handleBuyingBagOfBeans}/>
       buttonText="Return to Bean List";
     }
     else if (this.state.formVisibleOnPage){
@@ -87,8 +94,7 @@ class BeanControl extends React.Component {
       buttonText = "Return to Bean List";
     } else  {
       currentlyVisibleState = <BeanList beanList={this.state.mainBeanList} 
-      onBeanSelection={this.handleChangingSelectedBean}
-      onBuyingBean={this.handleBuyingBagOfBeans}/>;
+      onBeanSelection={this.handleChangingSelectedBean}/>
       buttonText = "Add Bean";    
     }
     return (

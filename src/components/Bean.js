@@ -10,7 +10,6 @@ function Bean(props) {
       <h4>{props.roast}</h4>
       <h4>Click for details of Remaining Beans in Stock</h4>
       </div>
-      <button onClick={() => props.whenBuyBeanClicked(props.id)}>Buy a 1b Bag!</button>
       <hr/>
     </React.Fragment> 
   );
@@ -22,10 +21,8 @@ Bean.propTypes = {
   origin: PropTypes.string,
   roast: PropTypes.string,
   id: PropTypes.string,
-  beanCount: PropTypes.number,
-  initialBean: PropTypes.number,
-  whenBuyBeanClicked: PropTypes.func,
-  buyButtonClicked: PropTypes.func
+  // beanCount: PropTypes.number,
+  // initialBean: PropTypes.number
 };
 
 export default Bean;
